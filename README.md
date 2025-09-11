@@ -25,6 +25,4 @@ Sisaldab:
 - Andmekosseisude kirjeldusi (andmesektsioonid ja nende struktuur)
 - Näidisfaile (XBRL GL vormingus)
 
-- 
-
 
