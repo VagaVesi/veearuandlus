@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Vee tarbimise andmete näidis fail XBRL Global Ledger baasil  -->
+
+
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xbrll="http://www.xbrl.org/2003/linkbase"
+			xsi:schemaLocation="http://www.xbrl.org/int/gl/plt/2015-03-25 http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25"
+            xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
+            xmlns:iso639="http://www.xbrl.org/2005/iso639"
+            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+            xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25"
+            xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25"
+            xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25">
+
+<xbrll:schemaRef xlink:href="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+                 xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                 xlink:type="simple"/>
+<xbrli:context id="now">
+<xbrli:entity>
+<xbrli:identifier scheme="http://www.ariregister.rik.ee">10257326</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2024-01-26</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+<xbrli:unit id="eur">
+<xbrli:measure>iso4217:EUR</xbrli:measure>
+</xbrli:unit>
+<xbrli:unit id="NotUsed">
+	<xbrli:measure>pure</xbrli:measure>
+</xbrli:unit>
+<gl-cor:accountingEntries>
+<gl-cor:documentInfo>
+<gl-cor:entriesType contextRef="now">other</gl-cor:entriesType>
+<gl-cor:uniqueID contextRef="now">90791148-2024-01-26T12:30:22:055</gl-cor:uniqueID>
+<gl-cor:language contextRef="now">iso639:et</gl-cor:language>
+<gl-cor:creationDate contextRef="now">2024-01-26</gl-cor:creationDate>
+<gl-bus:creator contextRef="now">MKM veetarbimise näidis</gl-bus:creator>
+<gl-cor:entriesComment contextRef="now">Näidis vee tarbimise andmete andmepõhise aruandluse tarbeks</gl-cor:entriesComment>
+<gl-cor:periodCoveredStart contextRef="now">2024-03-01</gl-cor:periodCoveredStart>
+<gl-cor:periodCoveredEnd contextRef="now">2024-03-31</gl-cor:periodCoveredEnd>
+<gl-bus:sourceApplication contextRef="now">Majandustarkvara</gl-bus:sourceApplication>
+<gl-muc:defaultCurrency contextRef="now">iso4217:eur</gl-muc:defaultCurrency>
+</gl-cor:documentInfo>
+<gl-cor:entityInformation>
+<gl-bus:organizationIdentifiers>
+<gl-bus:organizationIdentifier contextRef="now">10257326</gl-bus:organizationIdentifier>
+<gl-bus:organizationDescription contextRef="now">Äriregistrikood</gl-bus:organizationDescription>
+</gl-bus:organizationIdentifiers>
+</gl-cor:entityInformation>
+<gl-cor:entryHeader>
+<gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+<gl-cor:entryNumber contextRef="now">EE0401003</gl-cor:entryNumber>
+<gl-cor:entryDetail>
+<gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+<gl-cor:account>
+<gl-cor:accountMainID contextRef="now">418012</gl-cor:accountMainID>
+<gl-cor:accountPurposeDescription contextRef="now">MAJANDUSLIKSISU2023ap</gl-cor:accountPurposeDescription>
+<gl-cor:accountSub>
+	<gl-cor:accountSubID contextRef="now">36.00.11</gl-cor:accountSubID>
+	<gl-cor:accountSubType contextRef="now">TTK2015</gl-cor:accountSubType>
+</gl-cor:accountSub>
+<gl-cor:accountSub>
+<gl-cor:accountSubID contextRef="now">VESI_120011</gl-cor:accountSubID>
+<gl-cor:accountSubType contextRef="now">TEHING2023ap</gl-cor:accountSubType>
+</gl-cor:accountSub>
+<gl-cor:accountSub>
+<gl-cor:accountSubID contextRef="now">Hageri alevik,TR_1200</gl-cor:accountSubID>
+<gl-cor:accountSubType contextRef="now">Toimla2022,TOIMLAROLL2022ap</gl-cor:accountSubType>
+</gl-cor:accountSub>
+<gl-cor:accountSub>
+<gl-cor:accountSubID contextRef="now">1600</gl-cor:accountSubID>
+<gl-cor:accountSubType contextRef="now">VEELIIK2023ap</gl-cor:accountSubType>
+</gl-cor:accountSub>
+<gl-cor:accountSub>
+<gl-cor:accountSubID contextRef="now">36001</gl-cor:accountSubID>
+<gl-cor:accountSubType contextRef="now">EMTAK2008EST</gl-cor:accountSubType>
+</gl-cor:accountSub>
+<gl-cor:accountSub>
+<gl-cor:accountSubID contextRef="now">L.VV/331387,Keskkonnaluba</gl-cor:accountSubID>
+<gl-cor:accountSubType contextRef="now">LITSENTS2023,LITSENTSIROLL2023ap</gl-cor:accountSubType>
+</gl-cor:accountSub>
+</gl-cor:account>
+<gl-cor:amount contextRef="now" decimals="2" unitRef="eur">2300.00</gl-cor:amount>
+<gl-bus:measurable>
+<gl-bus:measurableDescription contextRef="now">MOODETAV_KOGUS</gl-bus:measurableDescription>
+<gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">8926</gl-bus:measurableQuantity>
+<gl-bus:measurableUnitOfMeasure contextRef="now">m3</gl-bus:measurableUnitOfMeasure>
+</gl-bus:measurable>
+</gl-cor:entryDetail>
+</gl-cor:entryHeader>
+</gl-cor:accountingEntries>
+</xbrli:xbrl>
