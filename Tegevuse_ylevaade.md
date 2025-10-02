@@ -1,6 +1,6 @@
 # Veemajanduse valdkonna ülevaade
 
-## Seotud EMTAK klassifikaatorid
+## Veettevõtjate EMTAK klassifikaatorid
 
 36001	Veekogumine, -töötlus ja -varustus
 36002	Olmeveega varustamine
@@ -28,12 +28,12 @@ Majandusliku sisu klassifikaatoris on kulude eristus 520132 Kulud - Veevarustust
 
 ## Toimingud
 
-### Sissetulek (deebet ehk plussiga kogus)
+### Sissetulek
 -	Veevõtt, mis liiki vesi (sh kui reovesi, siis purgimine)
 -	Ost
 -	Üle andmine (kasutusel mõiste teistele antav vesi)
 
-### Väljaminek (kreedit ehk miinusega kogus)
+### Väljaminek
 -	Kulu ehk milleks kasutatakse (sh kaod)
 -	Üle andmine (kasutusel mõiste veekasutus)
 -	Müük
@@ -62,3 +62,4 @@ Investeeringute juures oleks vaja tõenäoliselt vara liiki kas spetsiifilise va
 * Erisus
 Investeeringud – täitmiseks ainult elanikele vee- ja kanalisatsiooniteenust osutavatele
 ettevõtetele
+
