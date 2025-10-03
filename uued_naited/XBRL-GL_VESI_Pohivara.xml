@@ -58,6 +58,8 @@
         </gl-cor:entityInformation>
         
         <!-- TODO: VAJA LISADA VEETÖÖTLUSJAAMA KOOD JA NIMETUS-->
+        <!-- TODO: SOOVITUSLIKULT LISADA TOIMLA-->
+        <!-- TOIMLA KAUDU SAAB KÄTTE ADS-i ja VEEHAARDE-->
 
         <gl-cor:entryHeader>
             <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
