@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Põhivarade registri andmed -->
+
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xbrll="http://www.xbrl.org/2003/linkbase"
+            xsi:schemaLocation="http://www.xbrl.org/int/gl/plt/2015-03-25 http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25"
+            xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
+            xmlns:iso639="http://www.xbrl.org/2005/iso639"
+            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+            xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25"
+            xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25"
+            xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25">
+
+    <xbrll:schemaRef xlink:href="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+                     xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                     xlink:type="simple"/>
+    
+    <xbrli:context id="now">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.ariregister.rik.ee">10257326</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2025-10-02</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    
+    <xbrli:unit id="eur">
+        <xbrli:measure>iso4217:eur</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="NotUsed">
+        <xbrli:measure>pure</xbrli:measure>
+    </xbrli:unit>
+    
+    <gl-cor:accountingEntries>
+        <gl-cor:documentInfo>
+            <gl-cor:entriesType contextRef="now">other</gl-cor:entriesType>
+            <gl-cor:uniqueID contextRef="now">12345678-2025-10-02T12:30:22.055Z</gl-cor:uniqueID>
+            <gl-cor:language contextRef="now">iso639:et</gl-cor:language>
+            <gl-cor:creationDate contextRef="now">2025-10-02</gl-cor:creationDate>
+            <gl-bus:creator contextRef="now">AnmdestikuEsitajaIsikukood</gl-bus:creator>
+            <gl-cor:entriesComment contextRef="now">Põhivara näited veearuandluse tarbeks</gl-cor:entriesComment>
+            <gl-cor:periodCoveredStart contextRef="now">2025-09-01</gl-cor:periodCoveredStart>
+            <gl-cor:periodCoveredEnd contextRef="now">2025-09-30</gl-cor:periodCoveredEnd>
+            <gl-bus:sourceApplication contextRef="now">Majandustarkvara</gl-bus:sourceApplication>
+            <gl-muc:defaultCurrency contextRef="now">iso4217:eur</gl-muc:defaultCurrency>
+        </gl-cor:documentInfo>
+        
+        <gl-cor:entityInformation>
+            <gl-bus:organizationIdentifiers>
+                <gl-bus:organizationIdentifier contextRef="now">12345678</gl-bus:organizationIdentifier>
+                <gl-bus:organizationDescription contextRef="now">ARIREGISTRIKOOD</gl-bus:organizationDescription>
+            </gl-bus:organizationIdentifiers>
+        </gl-cor:entityInformation>
+        
+        <!-- TODO: VAJA LISADA VEETÖÖTLUSJAAMA KOOD JA NIMETUS-->
+
+        <gl-cor:entryHeader>
+            <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+            <gl-cor:entryNumber contextRef="now">PÕHIVARA_REGISTRI_ANDMEKOOSSEIS_KOOD</gl-cor:entryNumber>    
+            <!-- Järgnevalt tulevad põhivarade andmed-->
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+                <gl-cor:account>
+                    <!-- Põhivara soetusmaksumus-->
+                    <gl-cor:accountMainID contextRef="now">110021</gl-cor:accountMainID>
+                    <!-- Varagrupp-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VG_103</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VARAGRUPP2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Varaliik VEETÖÖTLUSJAAM-->
+                    <!-- Koodi algusRV on Rajatis:Veevaldkond-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">RV_001</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VARALIIK2026ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>            
+                <!--Vara soetusmaksumus-->
+                </gl-cor:account>
+                <gl-cor:amount contextRef="now" decimals="2" unitRef="eur">2300.00</gl-cor:amount>
+                <!-- Vara arvelevõtmise kuupäev-->
+                <gl-cor:postingDate contextRef="now" >2025-09-01</gl-cor:postingDate>
+                <!-- Kotkases täidetakse osad andmed automaatselt-->
+                <!-- Vara iseloomustavad tunnused-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">KASULIK_ELUIGA</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">25</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">AASTA</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- Projekteeritud jõudlus m3/h või m3/d-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">PROJEKTEERITUD_JÕUDLUS</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">1000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">m3/h</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- Projekteerimise aasta -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">PROJEKTEERIMISE_AASTA</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">2022</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">y</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- measurablDescription on ära kasutatud, mis sobiks tekstilise info esitamiseks. Korrektne oleks kasutada measurableID-->
+                <gl-bus:measurable>
+                <!-- VEEHPUHASTUSSEADME Tehasetüüp (mark, mudel)-->
+                    <gl-bus:measurableID contextRef="now">TEHASE MARK ja MUDEL</gl-bus:measurableID>    
+                    <gl-bus:measurableDescription contextRef="now">TEHASE_TYYP</gl-bus:measurableDescription>
+                </gl-bus:measurable>
+                <!-- Veepuhastusmeetod (mitu meetodit võimalik nt rauaärastus, aereerimine, kloorimine, fluori ärastus, osoonimine j)-->
+                <!-- Mitme valiku valimine on keeruline, kuid võimalik-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableID contextRef="now">RAUA_ARASTUS</gl-bus:measurableID>
+                    <gl-bus:measurableIDSchema contextRef="now">VEEPUHASTUS_MEETOD</gl-bus:measurableIDSchema>            
+                </gl-bus:measurable>
+                <gl-bus:measurable>
+                    <gl-bus:measurableID contextRef="now">KLOORIMINE</gl-bus:measurableID>
+                    <gl-bus:measurableIDSchema contextRef="now">VEEPUHASTUS_MEETOD</gl-bus:measurableIDSchema>            
+                </gl-bus:measurable>
+                <!-- Käikuandmise aasta / ja kuu (sisult arvelevõtmise ajast tuletatav)-->
+                <!-- Uuendamise aasta ja kuu (sisuliselt olemasoleva vara parendamisest tuletatav) -->
+            </gl-cor:entryDetail>
+        </gl-cor:entryHeader>
+    </gl-cor:accountingEntries>
+</xbrli:xbrl>

@@ -76,6 +76,7 @@
                     </gl-cor:accountSub>
 
                     <!--Toimla näitab veevõtu asukohta. Toimla uue struktuuriga-->
+                    <!-- Kas iga toimla kohta eraldi andmestik või kõik toimlad koos?-->
                     <gl-cor:accountSub>
                         <gl-cor:accountSubID contextRef="now">POH0001328</gl-cor:accountSubID>
                         <gl-cor:accountSubType contextRef="now">TOIMLA</gl-cor:accountSubType>
