@@ -1,6 +1,245 @@
-<!-- Veeproovid võetakse toimlast / veehaardest ja veeliigist -->
+<!-- Veeproovid võetakse toimlast / veehaardest, veelase ja veeliigist -->
 <!-- Vajadusel täpsustatakse vara, millega proov seotud (nt põhivara kood)) -->
 
+<!-- Tarbija kraanid ja kanister(mahuti) -->
+
+<!-- Veekäitleja -> proovivõtu koht. Terviseameti andmebaasis asukoht on olemas -->
+<!-- adhoc võimalik Veekäitleja esindaja või labori proovivõtja. Peaksid selle registreerima Terviseametis-->
 
 <!-- Veeproovid on seotud näitudega, mida fikseeritakse measurable plokis-->
-<!-- Vee temperatuur on üks mõõdetavatest näitajatest. Saab olla kraadides või jah/ei vastusena temp. piirina-->
+<!-- Vee temperatuur on üks mõõdetavatest näitajatest -->
+
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xbrll="http://www.xbrl.org/2003/linkbase"
+            xsi:schemaLocation="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25"
+            xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
+            xmlns:iso639="http://www.xbrl.org/2005/iso639"
+            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+            xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25"
+            xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25"
+            xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25">
+
+    <xbrll:schemaRef xlink:href="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+                     xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                     xlink:type="simple"/>
+    
+    <xbrli:context id="now">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.ariregister.rik.ee">10257326</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2025-10-02</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    
+    <xbrli:unit id="eur">
+        <xbrli:measure>iso4217:eur</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="NotUsed">
+        <xbrli:measure>pure</xbrli:measure>
+    </xbrli:unit>
+    
+    <gl-cor:accountingEntries>
+        <gl-cor:documentInfo>
+            <gl-cor:entriesType contextRef="now">other</gl-cor:entriesType>
+            <gl-cor:uniqueID contextRef="now">12345678-2025-10-02T12:30:22.055Z</gl-cor:uniqueID>
+            <gl-cor:language contextRef="now">iso639:et</gl-cor:language>
+            <gl-cor:creationDate contextRef="now">2025-10-02</gl-cor:creationDate>
+            <gl-bus:creator contextRef="now">AnmdestikuEsitajaIsikukood</gl-bus:creator>
+            <gl-cor:entriesComment contextRef="now">Põhivara näited veearuandluse tarbeks</gl-cor:entriesComment>
+            <gl-cor:periodCoveredStart contextRef="now">2025-09-01</gl-cor:periodCoveredStart>
+            <gl-cor:periodCoveredEnd contextRef="now">2025-09-30</gl-cor:periodCoveredEnd>
+            <gl-bus:sourceApplication contextRef="now">Majandustarkvara</gl-bus:sourceApplication>
+            <gl-muc:defaultCurrency contextRef="now">iso4217:eur</gl-muc:defaultCurrency>
+        </gl-cor:documentInfo>
+        
+        <gl-cor:entityInformation>
+            <gl-bus:organizationIdentifiers>
+                <gl-bus:organizationIdentifier contextRef="now">12345678</gl-bus:organizationIdentifier>
+                <gl-bus:organizationDescription contextRef="now">ARIREGISTRIKOOD</gl-bus:organizationDescription>
+            </gl-bus:organizationIdentifiers>
+        </gl-cor:entityInformation>
+        
+        <gl-cor:entryHeader>
+            <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+            <gl-cor:entryNumber contextRef="now">PROOVID_ANDMEKOOSSEIS_KOOD</gl-cor:entryNumber>    
+            <!-- Järgnevalt tulevad võetud proovide andmed-->
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+                <!-- Proovi võtmise viited-->
+                <gl-cor:account>
+                    <!-- Toimingut iseloomustavad tunnused esitatakse accountSub kaudu-->
+                    <!-- TODO Viited registritele võiks kokku leppida ehk tekitada loendi välistest registritest, mida APA kasutab-->
+                    <!-- Viide keskkonnaloale -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">L.VV/331100</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Veehaarde või puurkaevu grupi kood -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">POH0001538</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Proovivõtu koordinaadid -->
+                    <!-- Määratletud proovivõtu kohad -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">X:6526971, Y:670037</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik joogivesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_2700</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <!-- Proovi võtja andmed (Näide välise osapoolega)-->
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - proovivõtja (isik)-->
+					<gl-cor:identifierCode contextRef="now">EE34801010100</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ISIKUKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Välise osapoole puhul saab viidata ka kellelt proov võeti, kuigi loal on andmed olemas-->
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - veeettevõtja, kellelt proov võeti-->
+					<gl-cor:identifierCode contextRef="now">12345678</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ARIREGISTRIKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Viide proovi aktile -->
+                <gl-cor:documentNumber contextRef="now">VIIDE MÕÕTMISAKT 1</gl-cor:documentNumber>                               
+                <!-- Proovi võtmise kuupäev-->
+                <gl-cor:documentDate contextRef="now">2025-01-03</gl-cor:documentDate>                
+                <!-- Vee temperatuur proovi võtmisel-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">VEE_TEMPERATUUR</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">24</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_C</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- Elektrijuhtivus -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableIDSchema contextRef="now">SEIRENAITAJAD2024ap</gl-bus:measurableIDSchema>
+                    <gl-bus:measurableDescription contextRef="now">ELjuh</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">534</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">μS/cm</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- Üldfosfor (Püld) -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableIDSchema contextRef="now">SEIRENAITAJAD2024ap</gl-bus:measurableIDSchema>
+                    <gl-bus:measurableDescription contextRef="now">Pyld</gl-bus:measurableDescription>
+                    <!--TODO: Mitu kohta peale koma peab olema proovi näit?-->
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">0.6</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">mgP/l</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
+
+           <gl-cor:entryDetail>
+                <!-- 1. Detail. Detailid saab kokku siduda lineNumber kaudu. -->
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">2</gl-cor:lineNumberCounter>
+                <!-- Proovi võtmise viited-->
+                <gl-cor:account>
+                    <!-- Toimingut iseloomustavad tunnused esitatakse accountSub kaudu-->
+                    <!-- TODO Viited registritele võiks kokku leppida ehk tekitada loendi välistest registritest, mida APA kasutab-->
+                    <!-- Viide keskkonnaloale -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">L.VV/328993</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Puhastusseadme kood -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">PUH0823020</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Proovivõtu koordinaadid -->
+                    <!-- Määratletud proovivõtu kohad -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">X: 6443662, Y: 637554</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik Reovesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_2400</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <!-- Proovi võtja andmed (Näide sisese osapoolega)-->
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - proovivõtja (isik)-->
+					<gl-cor:identifierCode contextRef="now">EE34801010200</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ISIKUKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Viide proovi aktile -->
+                <gl-cor:documentNumber contextRef="now">VIIDE MÕÕTMISAKT 2-4</gl-cor:documentNumber>                               
+                <!-- Proovi võtmise kuupäev-->
+                <gl-cor:documentDate contextRef="now">2025-01-08</gl-cor:documentDate>                
+                <!-- Vee temperatuur proovi võtmisel-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">VEE_TEMPERATUUR</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">8</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_C</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- BHT7 -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableIDSchema contextRef="now">SEIRENAITAJAD2024ap</gl-bus:measurableIDSchema>
+                    <gl-bus:measurableDescription contextRef="now">BHT7</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">2000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">mgO/l</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
+
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">3</gl-cor:lineNumberCounter>
+                <!-- Toimingut iseloomustavad tunnused esitatakse accountSub kaudu-->
+                <gl-cor:account>
+                    <!-- Viide keskkonnaloale -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">L.VV/328993</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Puhastusseadme kood -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">PUH0823020</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Proovivõtu koordinaadid -->
+                    <!-- Määratletud proovivõtu kohad -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">X: 6443662, Y: 637554</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik Heitvesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_2100</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - proovivõtja (isik)-->
+					<gl-cor:identifierCode contextRef="now">EE34801010200</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ISIKUKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Viide proovi aktile -->
+                <gl-cor:documentNumber contextRef="now">VIIDE MÕÕTMISAKT 2-4</gl-cor:documentNumber>                               
+                <!-- Proovi võtmise kuupäev-->
+                <gl-cor:documentDate contextRef="now">2025-01-08</gl-cor:documentDate>                
+                <!-- Vee temperatuur proovi võtmisel-->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">VEE_TEMPERATUUR</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">11</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_C</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- BHT7 -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableIDSchema contextRef="now">SEIRENAITAJAD2024ap</gl-bus:measurableIDSchema>
+                    <gl-bus:measurableDescription contextRef="now">BHT7</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="2">2000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">mgO/l</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
+
+        </gl-cor:entryHeader>
+    </gl-cor:accountingEntries>
+</xbrli:xbrl>
+

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Põhivarade registri andmed -->
+<!-- Aluseks põhivaraga seotud majandustehingud, mis sisaldavad põhivara detailseid andmeid-->
 
 <xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:xbrll="http://www.xbrl.org/2003/linkbase"
-            xsi:schemaLocation="http://www.xbrl.org/int/gl/plt/2015-03-25 http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+            xsi:schemaLocation="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25"
             xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
@@ -57,12 +58,8 @@
             </gl-bus:organizationIdentifiers>
         </gl-cor:entityInformation>
         
-        <!-- TODO: VAJA LISADA VEETÖÖTLUSJAAMA KOOD JA NIMETUS-->
-        <!-- TODO: SOOVITUSLIKULT LISADA TOIMLA-->
-        <!-- TOIMLA KAUDU SAAB KÄTTE ADS-i ja VEEHAARDE-->
-
         <gl-cor:entryHeader>
-            <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+        <!-- TODO: Kuidas lahendada andmete muudatused, parendused? Peaks viitama andmete vastuvõtja ID-le-->
             <gl-cor:entryNumber contextRef="now">PÕHIVARA_REGISTRI_ANDMEKOOSSEIS_KOOD</gl-cor:entryNumber>    
             <!-- Järgnevalt tulevad põhivarade andmed-->
             <gl-cor:entryDetail>
@@ -80,18 +77,41 @@
                     <gl-cor:accountSub>
                         <gl-cor:accountSubID contextRef="now">RV_001</gl-cor:accountSubID>
                         <gl-cor:accountSubType contextRef="now">VARALIIK2026ap</gl-cor:accountSubType>
-                    </gl-cor:accountSub>            
+                    </gl-cor:accountSub> 
+                    <!-- VARA ASUKOHA INFO-->
+                    <!-- TOIMLA KAUDU SAAB KÄTTE ADS-i ja POHVEEHAARE/SUUBLA-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VA302</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VALJALASKME_KOOD</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Saab määratleta vajadusel ka vara koordinaadd -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">X:6526971, Y:670037</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Viide keskkonnaloale, millega seotud -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">L.VV/328993</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Võib lisada viite ka olemasolevale puhastusseadme koodile -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">PUH0823020</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
                 <!--Vara soetusmaksumus-->
                 </gl-cor:account>
                 <gl-cor:amount contextRef="now" decimals="2" unitRef="eur">2300.00</gl-cor:amount>
                 <!-- Vara arvelevõtmise kuupäev-->
                 <gl-cor:postingDate contextRef="now" >2025-09-01</gl-cor:postingDate>
-                <!-- Kotkases täidetakse osad andmed automaatselt-->
+                <!-- Vara detailid VEETÖÖTLUSJAAMA KOOD JA NIMETUS. Kasutatud vabu tekstivälju-->
+                <gl-cor:documentReference contextRef="now">VEETÖÖTLUSJAAMA KOOD</gl-cor:documentReference>
+                <gl-cor:detailComment contextRef="now">VEETÖÖTLUSJAAMA NIMETUS</gl-cor:detailComment>
                 <!-- Vara iseloomustavad tunnused-->
                 <gl-bus:measurable>
                     <gl-bus:measurableDescription contextRef="now">KASULIK_ELUIGA</gl-bus:measurableDescription>
                     <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">25</gl-bus:measurableQuantity>
-                    <gl-bus:measurableUnitOfMeasure contextRef="now">AASTA</gl-bus:measurableUnitOfMeasure>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_YEAR</gl-bus:measurableUnitOfMeasure>
                 </gl-bus:measurable>
                 <!-- Projekteeritud jõudlus m3/h või m3/d-->
                 <gl-bus:measurable>
@@ -103,16 +123,16 @@
                 <gl-bus:measurable>
                     <gl-bus:measurableDescription contextRef="now">PROJEKTEERIMISE_AASTA</gl-bus:measurableDescription>
                     <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">2022</gl-bus:measurableQuantity>
-                    <gl-bus:measurableUnitOfMeasure contextRef="now">y</gl-bus:measurableUnitOfMeasure>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_YEAR</gl-bus:measurableUnitOfMeasure>
                 </gl-bus:measurable>
                 <!-- measurablDescription on ära kasutatud, mis sobiks tekstilise info esitamiseks. Korrektne oleks kasutada measurableID-->
                 <gl-bus:measurable>
                 <!-- VEEHPUHASTUSSEADME Tehasetüüp (mark, mudel)-->
-                    <gl-bus:measurableID contextRef="now">TEHASE MARK ja MUDEL</gl-bus:measurableID>    
+                    <gl-bus:measurableCodeDescription contextRef="now">Seadme mark ja mudel tekstina</gl-bus:measurableCodeDescription>    
                     <gl-bus:measurableDescription contextRef="now">TEHASE_TYYP</gl-bus:measurableDescription>
                 </gl-bus:measurable>
                 <!-- Veepuhastusmeetod (mitu meetodit võimalik nt rauaärastus, aereerimine, kloorimine, fluori ärastus, osoonimine j)-->
-                <!-- Mitme valiku valimine on keeruline, kuid võimalik-->
+                <!-- Mitme valiku valimine on võimalik, subaccount ei luba sellist jaotust-->
                 <gl-bus:measurable>
                     <gl-bus:measurableID contextRef="now">RAUA_ARASTUS</gl-bus:measurableID>
                     <gl-bus:measurableIDSchema contextRef="now">VEEPUHASTUS_MEETOD</gl-bus:measurableIDSchema>            

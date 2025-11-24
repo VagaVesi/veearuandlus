@@ -16,7 +16,7 @@
 
 - Tegevus toimub asukohas (Toimla)
 - Toimla on seotud tegevusala(dega?)
-- Toimla on seotud aadressiga (omavalitsusega) ning veehaardega (kas võib olla mitu?)
+- Toimla on seotud aadressiga (omavalitsustega) ning veehaardega (kas võib olla mitu?)
 - Toimla on seotud tegevusloaga, mis määrab ära mahud jms näitajad.
 - Toimlatega on seotud põhivarad (vara detailsemad grupid täiendavate detailsete omadustega)
 

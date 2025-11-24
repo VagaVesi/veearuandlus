@@ -1,12 +1,176 @@
-<!-- Toimingute info sisaldab veeliigiga toiminguid-->
-<!-- Mis juhtudel toiminguid on vaja siduda näitudega või tuleks esitada vaid kogus measurable plokis?-->
-<!-- Vett või veeteenust müüakse artiklitena.-->
+<!-- Toimingute info hinnataotluse näitel-->
+<!-- Toimingute puhul peab olema viide loale, kna see määrab ära, mis on lubatud kogused ja mis luba ületavad kogused-->
 
 
-<!-- TOIMINGUD LOODUSEGA-->
-<!-- VEE SISSETULEKUD-->
-<!-- VEE VÄLJAMINEKUD-->
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:xbrll="http://www.xbrl.org/2003/linkbase"
+            xsi:schemaLocation="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25"
+            xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
+            xmlns:iso639="http://www.xbrl.org/2005/iso639"
+            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+            xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25"
+            xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25"
+            xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25">
+
+    <xbrll:schemaRef xlink:href="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"
+                     xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"
+                     xlink:type="simple"/>
+    
+    <xbrli:context id="now">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.ariregister.rik.ee">10257326</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2025-10-02</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    
+    <xbrli:unit id="eur">
+        <xbrli:measure>iso4217:eur</xbrli:measure>
+    </xbrli:unit>
+    
+    <xbrli:unit id="NotUsed">
+        <xbrli:measure>pure</xbrli:measure>
+    </xbrli:unit>
+    
+    <gl-cor:accountingEntries>
+        <gl-cor:documentInfo>
+            <gl-cor:entriesType contextRef="now">other</gl-cor:entriesType>
+            <gl-cor:uniqueID contextRef="now">12345678-2025-10-02T12:30:22.055Z</gl-cor:uniqueID>
+            <gl-cor:language contextRef="now">iso639:et</gl-cor:language>
+            <gl-cor:creationDate contextRef="now">2025-10-02</gl-cor:creationDate>
+            <gl-bus:creator contextRef="now">AnmdestikuEsitajaIsikukood</gl-bus:creator>
+            <gl-cor:entriesComment contextRef="now">Tehingute näited veearuandluse tarbeks</gl-cor:entriesComment>
+            <gl-cor:periodCoveredStart contextRef="now">2025-09-01</gl-cor:periodCoveredStart>
+            <gl-cor:periodCoveredEnd contextRef="now">2025-09-30</gl-cor:periodCoveredEnd>
+            <gl-bus:sourceApplication contextRef="now">Majandustarkvara</gl-bus:sourceApplication>
+            <gl-muc:defaultCurrency contextRef="now">iso4217:eur</gl-muc:defaultCurrency>
+        </gl-cor:documentInfo>
+        
+        <gl-cor:entityInformation>
+            <gl-bus:organizationIdentifiers>
+                <gl-bus:organizationIdentifier contextRef="now">12345678</gl-bus:organizationIdentifier>
+                <gl-bus:organizationDescription contextRef="now">ARIREGISTRIKOOD</gl-bus:organizationDescription>
+            </gl-bus:organizationIdentifiers>
+        </gl-cor:entityInformation>
+        
+        <gl-cor:entryHeader>
+            <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+            <gl-cor:entryNumber contextRef="now">VEE_AMMUTAMISE_ANDMESEKTSIOON</gl-cor:entryNumber>    
+            <!-- Iga ammutamise koht tuleks esitada eraldi entry detailina-->
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+                <gl-cor:account>
+                    <!-- Toimingut iseloomustavad tunnused esitatakse accountSub kaudu-->
+                    <!-- TODO Viited registritele võiks kokku leppida ehk tekitada loendi välistest registritest, mida APA kasutab-->
+                    <!-- Viide keskkonnaloale -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VEEVOTT</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">TOIMINGU_LIIK_KLASSIFIKAATOR</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">L.VV/331100</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Veehaarde või puurkaevu grupi kood -->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">POH0001538</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VIIDE_REGISTRILE</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik põhjavesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_1600</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                        <!-- Põhjavee korral saab näidata täpsustava põhjaveekihi koodi -->
+                        <gl-cor:segmentParentTuple>
+							<gl-cor:parentSubaccountCode contextRef="now">DEVON</gl-cor:parentSubaccountCode>
+							<gl-cor:parentSubaccountType contextRef="now">VEEKIHT_KLASSIFIKAATOR</gl-cor:parentSubaccountType>
+						</gl-cor:segmentParentTuple>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <!-- Veekoguse jaoks on kaks võimalust. Saata kogus või näit -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">KOGUS</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">5000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_M3</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+                <!-- Saab esitada eraldi nii lõpp- kui algnäidu -->
+                <!-- Näites vaid lõppnäit koos Mõõtja koodi ning näidu kuupäevaga -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableIDOther contextRef="now">12345</gl-bus:measurableIDOther>
+                    <gl-bus:measurableIDOtherSchema contextRef="now">VEEMÕÕTJA_KOOD</gl-bus:measurableIDOtherSchema>
+                    <gl-bus:measurableDescription contextRef="now">LOPPNAIT</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">32314</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_M3</gl-bus:measurableUnitOfMeasure>
+                    <gl-bus:measurableEndDateTime contextRef="now">2025-09-27</gl-bus:measurableEndDateTime>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
+        </gl-cor:entryHeader>
+
+    <gl-cor:entryHeader>
+            <gl-cor:sourceJournalID contextRef="now">ot</gl-cor:sourceJournalID>
+            <gl-cor:entryNumber contextRef="now">VEE_OST</gl-cor:entryNumber>
+            <!-- eristada tuleb müügiks ostetud vesi ja omatarbe vesi-->
+            <!-- Vee ost-->   
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+                <gl-cor:account>
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VEE_OST_MYYGIKS</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">TOIMINGU_LIIK_KLASSIFIKAATOR</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik joogivesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_2700</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - veeettevõtja, kellelt vesi osteti-->
+					<gl-cor:identifierCode contextRef="now">12345678</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ARIREGISTRIKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Veekoguse jaoks on kaks võimalust. Saata kogus või näit -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">KOGUS</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">5000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_M3</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
+
+            <gl-cor:entryDetail>
+                <gl-cor:lineNumberCounter contextRef="now" unitRef="NotUsed">1</gl-cor:lineNumberCounter>
+                <gl-cor:account>
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VEE_OST_MYYGIKS</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">TOIMINGU_LIIK_KLASSIFIKAATOR</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                    <!-- Vee liik joogivesi-->
+                    <gl-cor:accountSub>
+                        <gl-cor:accountSubID contextRef="now">VESIVL_2700</gl-cor:accountSubID>
+                        <gl-cor:accountSubType contextRef="now">VEELIIK2024ap</gl-cor:accountSubType>
+                    </gl-cor:accountSub>
+                </gl-cor:account>
+                <gl-cor:identifierReference>
+					<!--Siin määratakse tehingu osapooled - veeettevõtja, kellelt vesi osteti-->
+					<gl-cor:identifierCode contextRef="now">12345678</gl-cor:identifierCode>
+                    <gl-cor:identifierDescription contextRef="now">ARIREGISTRIKOOD</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+                <!-- Veekoguse jaoks on kaks võimalust. Saata kogus või näit -->
+                <gl-bus:measurable>
+                    <gl-bus:measurableDescription contextRef="now">KOGUS</gl-bus:measurableDescription>
+                    <gl-bus:measurableQuantity contextRef="now" unitRef="NotUsed" decimals="0">5000</gl-bus:measurableQuantity>
+                    <gl-bus:measurableUnitOfMeasure contextRef="now">ISO_M3</gl-bus:measurableUnitOfMeasure>
+                </gl-bus:measurable>
+            </gl-cor:entryDetail>
 
 
-<!-- TEHINGUD OSAPOOLTEGA (tulu, kulu,  üleandmine)-->
-<!-- VEE KULUTUSED-->
+        </gl-cor:entryHeader>
+
+
+
+    </gl-cor:accountingEntries>
+</xbrli:xbrl>

@@ -1,5 +1,12 @@
-<!-- Toimla on koht, mille omadused on aadress ja veehaare (kas ka suubla?).-->
+<!-- Toimla on koht, mille omadused on aadress (mitu kohta on teeninduspiirkond) ja veehaare (asulaga seotud), veelase.-->
+
+<!-- Ühing taotleb tegevusloa, milles määratleb tegevusalad ja toimlad jms-->
+<!-- Tegevusloas fikseeritakse ka tegevuspiirkond-->
+
+<!-- Tegevusluba on seotud veehaardega ja veelaskmega(toimlad) -->
 <!-- Toimlaga on seotud põhivarad-->
-<!-- Toimla on seotud tegevusloaga, tegevusluba tegevusalaga-->
-<!-- Ühing registreerib oma toimlad-->
-<!-- Juhul kui toimla on seotud mitme omavalitsusega, tuleks eraldi toimlad registreerida.-->
+
+<!-- VAJA LAHENDADA: Joogivee puhastid ei ole loastatud objektid-->
+
+<!-- Andmete esitamisel on vaja esitada tegevusluba ja toimla(veehaare, väljalaske) kood. Nende põhjal saab tuletada kogu vajaliku metainfo-->
+

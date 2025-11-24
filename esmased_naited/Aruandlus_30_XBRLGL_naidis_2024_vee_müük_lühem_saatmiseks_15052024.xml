@@ -78,8 +78,8 @@
                         <gl-cor:accountSubType contextRef="now">TEHING2023ap</gl-cor:accountSubType>
                     </gl-cor:accountSub>
                     
+                    <!-- Kas õigem ei oleks esitada toimlat tehingu osapoolena?-->
                     <gl-cor:accountSub>
-                        <!-- Pigem kasutada konkreetset ADS aadressi viidet-->
                         <gl-cor:accountSubID contextRef="now">Hageri alevik</gl-cor:accountSubID>
                         <gl-cor:accountSubType contextRef="now">EE_ADS</gl-cor:accountSubType>
                         <gl-cor:segmentParentTuple>
@@ -97,7 +97,8 @@
                         <gl-cor:accountSubID contextRef="now">36001</gl-cor:accountSubID>
                         <gl-cor:accountSubType contextRef="now">EMTAK2008EST</gl-cor:accountSubType>
                     </gl-cor:accountSub>
-                    
+                
+                <!-- Keskkonnaluba ei ole oma olemuselt universaalne klassifikaator. Selle info peaks esitama mujal andmesektsioonis. -->    
                     <gl-cor:accountSub>
                         <gl-cor:accountSubID contextRef="now">L.VV/331387,Keskkonnaluba</gl-cor:accountSubID>
                         <gl-cor:accountSubType contextRef="now">LITSENTS2023,LITSENTSIROLL2023ap</gl-cor:accountSubType>
